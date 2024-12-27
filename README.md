@@ -2,6 +2,8 @@
 
 Link on this project Backend example: https://github.com/GitVladd/RealtimeChatAppUI
 
+Update environment variables in /src/environment folder to make it properly work
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
