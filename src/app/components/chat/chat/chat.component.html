@@ -1,0 +1,27 @@
+<div class="chat-container">
+  <div class="chat-header">
+    <span>Welcome, {{ userName }}!</span>
+  </div>
+  
+  <div class="messages-container">
+    <div class="message" 
+         *ngFor="let message of messages"
+         [ngClass]="getSentimentClass(message)">
+      <div class="message-header">
+        <strong>{{ message.user }}</strong>
+        <span class="timestamp">{{ message.timestamp | date:'short' }}</span>
+      </div>
+      <div class="message-content">{{ message.message }}</div>
+    </div>
+  </div>
+
+  <div class="input-container">
+    <input
+      type="text"
+      [(ngModel)]="newMessage"
+      placeholder="Type a message..."
+      (keyup.enter)="sendMessage()"
+    />
+    <button (click)="sendMessage()" [disabled]="!newMessage.trim()">Send</button>
+  </div>
+</div>
