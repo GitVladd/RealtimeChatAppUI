@@ -1,6 +1,6 @@
 # ChatAppUi
 
-Link on this project Backend example: [https://github.com/GitVladd/RealtimeChatAppUI](https://github.com/GitVladd/RealtimeChatAppBack)
+Link on this project Backend example: https://github.com/GitVladd/RealtimeChatAppUI
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
