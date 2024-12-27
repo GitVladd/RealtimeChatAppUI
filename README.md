@@ -1,32 +1,71 @@
-# ChatAppUi
+# Real-time Chat Application Frontend
 
-Link on this project Backend example: https://github.com/GitVladd/RealtimeChatAppUI
+A modern real-time chat application frontend built with Angular 17, featuring real-time messaging and sentiment analysis visualization.
 
-Update environment variables in /src/environment folder to make it properly work
+## Features
 
+- Real-time messaging with SignalR
+- Message sentiment visualization
+- Responsive material design
+- Message history with pagination
+- Real-time typing indicators
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+## Tech Stack
 
-## Development server
+- Angular 17.3.7
+- @microsoft/signalr 8.0.0
+- Angular Material
+- TypeScript 5.4.2
+- RxJS 7.8.0
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Quick Start
 
-## Code scaffolding
+1. Install dependencies:
+   ng install
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Configure environment:
+   Create src/environments/environment.ts with:
+   - apiUrl: http://localhost:5000
+
+3. Run development server:
+   ng serve
+
+Navigate to http://localhost:4200
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+For production:
+ng build --configuration production
 
-## Running unit tests
+## Project Structure
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+src/
+- app/
+  - components/    # UI components
+  - services/      # API services
+  - models/        # Interfaces
+  - shared/        # Shared utilities
+- environments/    # Environment configs
+- assets/         # Static files
 
-## Running end-to-end tests
+## Environment Configuration
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Development (environment.ts):
+- production: false
+- apiUrl: http://localhost:5000
 
-## Further help
+Production (environment.prod.ts):
+- production: true
+- apiUrl: https://your-backend.azurewebsites.net
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Azure Deployment
+
+1. Build the production version
+2. Deploy to Azure Web App
+3. Configure environment variables in Azure
+4. Enable CORS in backend settings
+
+## Development Commands
+
+- ng serve - Start development server
+- ng build - Build the application
